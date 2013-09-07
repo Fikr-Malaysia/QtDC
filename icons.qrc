@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>images/collapseall.gif</file>
+        <file>images/expandall.gif</file>
+        <file>images/pin_view.gif</file>
+        <file>images/refresh.gif</file>
+        <file>images/search_history.gif</file>
+        <file>images/search_next.gif</file>
+        <file>images/search_prev.gif</file>
+        <file>images/search_rem.gif</file>
+        <file>images/search_remall.gif</file>
+        <file>images/stop.gif</file>
+        <file>images/tsearch_obj.gif</file>
+    </qresource>
+</RCC>
