@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QLabel>
+#include <QtSql>
+
 namespace Ui {
 class MainWindow;
 }
@@ -23,7 +25,10 @@ private slots:
     void on_actionLogin_triggered();
 
     void on_action_About_triggered();
+    void on_actionDashboard_triggered();
 
+private:
+    void showError(const QSqlError &err);
 private:
     Ui::MainWindow *ui;
     QLabel *labelStatus;

@@ -54,7 +54,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionLogin"/>
+   <addaction name="actionDashboard"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Connect">
@@ -92,6 +92,21 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionDashboard">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/images/pin_view.gif</normaloff>:/icons/images/pin_view.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Dashboard</string>
+   </property>
+   <property name="toolTip">
+    <string>Show overall branches state</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
  </widget>

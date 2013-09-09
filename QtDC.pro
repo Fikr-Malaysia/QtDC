@@ -4,21 +4,26 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 TARGET = QtDC
 TEMPLATE = app
 
+include(dashboard/dashboard.pri)
 
 SOURCES += main.cpp\
         mainwindow.cpp \
     logindialog.cpp
 
+
 HEADERS  += mainwindow.h \
-    logindialog.h
+    logindialog.h \
+    initdb.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui
 
 RESOURCES += \
     icons.qrc
+
+

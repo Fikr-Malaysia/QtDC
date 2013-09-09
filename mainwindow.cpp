@@ -2,14 +2,28 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include "logindialog.h"
+#include "initdb.h"
+#include "dashboard.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    labelStatus = new QLabel("Not connected");
+    labelStatus = new QLabel("Ready");
     ui->statusBar->addWidget(labelStatus);
+
+    if (!QSqlDatabase::drivers().contains("QSQLITE"))
+        QMessageBox::critical(this, "Unable to load database", "This demo needs the SQLITE driver");
+
+    // initialize the database
+    qWarning() << "Begin initDB";
+    QSqlError err = initDb();
+
+    if (err.type() != QSqlError::NoError) {
+        showError(err);
+        return;
+    }
 }
 
 MainWindow::~MainWindow()
@@ -49,4 +63,16 @@ void MainWindow::on_action_About_triggered()
     msgBox.setText(tr("Programmer : Eko SW\nLife is good"));
     msgBox.setStandardButtons(QMessageBox::Ok);
     msgBox.exec();
+}
+
+void MainWindow::showError(const QSqlError &err)
+{
+    QMessageBox::critical(this, "Unable to initialize Database",
+                "Error initializing database: " + err.text());
+}
+
+void MainWindow::on_actionDashboard_triggered()
+{
+    this->setCentralWidget(NULL);
+    this->setCentralWidget(new Dashboard);
 }
