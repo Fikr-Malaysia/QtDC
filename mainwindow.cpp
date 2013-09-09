@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include "logindialog.h"
 #include "initdb.h"
-#include "dashboard.h"
+#include "dashboard/dashboard.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

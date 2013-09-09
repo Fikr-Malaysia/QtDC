@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dashboard</class>
+ <widget class="QWidget" name="Dashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Branch Management</string>
+      </attribute>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>79</x>
+         <y>79</y>
+         <width>351</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QListView" name="tableBranch"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
+        <item>
+         <widget class="QToolButton" name="btnRegisterBranch">
+          <property name="text">
+           <string>New</string>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextBesideIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="btnDelete">
+          <property name="text">
+           <string>Delete</string>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextBesideIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+  <action name="actionRegister_new_branch">
+   <property name="icon">
+    <iconset resource="../icons.qrc">
+     <normaloff>:/icons/images/expandall.gif</normaloff>:/icons/images/expandall.gif</iconset>
+   </property>
+   <property name="text">
+    <string>New branch</string>
+   </property>
+   <property name="toolTip">
+    <string>Register new branch in distribution center</string>
+   </property>
+  </action>
+  <action name="actionDelete_Branch">
+   <property name="icon">
+    <iconset resource="../icons.qrc">
+     <normaloff>:/icons/images/search_rem.gif</normaloff>:/icons/images/search_rem.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Branch</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete branch from DC</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

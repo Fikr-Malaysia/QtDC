@@ -2,19 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>743</width>
-    <height>531</height>
-   </rect>
-  </property>
   <property name="windowTitle">
    <string>Distribution Centre Control Panel</string>
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>true</bool>
@@ -25,8 +20,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>743</width>
-     <height>25</height>
+     <width>410</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
