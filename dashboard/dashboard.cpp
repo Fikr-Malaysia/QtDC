@@ -1,5 +1,6 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
+#include "entrydc.h"
 
 Dashboard::Dashboard(QWidget *parent) :
     QWidget(parent),
@@ -26,5 +27,6 @@ Dashboard::~Dashboard()
 
 void Dashboard::on_actionRegister_new_branch_triggered()
 {
-    qWarning() << "Halo";
+    EntryDC* entryDC = new EntryDC;
+    entryDC->exec();
 }
